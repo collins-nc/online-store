@@ -1,7 +1,7 @@
-//database
+/*database*/
 CREATE DATABASE e_com;
 
-//user
+/*user*/
 CREATE TABLE _user(
     id INT(11) AUTO_INCREMENT PRIMARY KEY NOT NULL,
     _name VARCHAR(225) NOT NULL,
@@ -11,7 +11,7 @@ CREATE TABLE _user(
     _password LONGTEXT NOT NULL
  );
 
-//products
+/*products*/
 CREATE TABLE product(
     prid INT(11) NOT NULL PRIMARY KEY,
     _name VARCHAR(255) NOT NULL,
