@@ -1,0 +1,125 @@
+
+.product{
+    width:250px;
+    height:350px;
+    border:1px solid gray;
+    border-radius: 15px;
+}
+.pic img{
+    width: auto;
+    height: 150px;
+}
+.check{
+    padding-left: 25%;
+}
+.row-4{
+    display: flex;
+    justify-content:space-around;
+}
+.main-pic img{
+    width:100%;
+    height: 100vh;
+}
+
+
+#address{
+    font-size: large;
+    font-weight: bold;
+    padding-right: 350px;
+    padding-top: 50px;
+}
+#contact{
+    display:flex;
+    justify-content:space-evenly;
+
+}
+
+
+#contact form {
+    width:100%;
+}
+#contact form input {
+    width:96%;
+    margin:20px 1%;
+    background:transparent;
+    border:0px;
+    border-bottom:3px solid rgba(255, 44, 90,0.5);
+    padding:8px 10px;
+    font-family: 'Poppins', sans-serif;
+    font-size:18px;
+    transition:0.4s ease-in-out;
+    color:#000;
+    font-weight:bold;
+}
+#contact form textarea {
+    width:96%;
+    margin:20px 1%;
+    padding:8px 10px;
+    border:0px;
+    border-bottom:3px solid rgba(255, 44, 90,0.5);
+    padding:8px 10px;
+    font-family: 'Poppins', sans-serif;
+    font-size:18px;
+    background:transparent;
+    resize:none;
+    transition:0.4s ease-in-out;
+    color:#000;
+    font-weight:bold;
+}
+#contact form input:focus {
+    outline:none;
+    border-bottom:3px solid rgba(255, 44, 90,1);
+}
+#contact form textarea:focus {
+    outline:none;
+    border-bottom:3px solid rgba(255, 44, 90,1);
+}
+#address {
+    position:relative;
+    top:-25px;
+    left:30px;
+}
+
+::placeholder {
+    color:#000;
+}
+button:focus {
+    outline:none;
+}
+
+#footer{
+    display: flex;
+    justify-content: center;
+    padding-top: 50px;
+}
+
+@media (max-width: 1000px){
+
+    .btn_one {
+    padding:6px 30px;
+    width:60%;
+    margin:4vh auto;
+    box-shadow:0px 10px 20px rgba(255, 44, 90, 0.8);
+    background:rgb(255, 44, 90);
+    color:#fff;
+    }
+    .btn_one:hover {
+        box-shadow:0px 10px 40px rgba(255, 44, 90, 0.8);
+        cursor:pointer;
+    }
+    #contact table tr td {
+        width:100%;
+        display:block;
+    }
+
+    #contact form input {
+        width:90%;
+    }
+    #contact form textarea {
+        width:90%;
+    }
+    #contact h1 {
+        width:33%;
+    }
+
+}

@@ -1,0 +1,41 @@
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+.logo img {
+    position: absolute;
+    top:7px;
+    left: 15px;
+
+}
+.top-box{
+    display: flex;
+    justify-content: space-around;
+    justify-items: flex-end;
+    height: 85px;
+    width: 100%;
+    background-color: rgba(var(--b3f,250,250,250),1);
+    
+}
+.top-right-cont{
+    display: flex;
+    position: absolute;
+    top:30px;
+    right:25px;
+    padding: 0 50px 0 50px;
+    margin-right: 5px;
+}
+.btn_one{
+    background-color: rgba(var(--b3f,175,175,175),1);
+    color: wheat;
+    border-style: none;
+    border-radius: 25px;
+    padding: 15px;
+    margin-left: 10px;
+    transition-duration: 0.4s;
+}
+.btn_one:hover{
+    background-color: #00CDCD;
+    color: white;
+}

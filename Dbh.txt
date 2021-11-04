@@ -1,0 +1,113 @@
+//database
+CREATE DATABASE e_com;
+
+//user
+CREATE TABLE _user(
+    id INT(11) AUTO_INCREMENT PRIMARY KEY NOT NULL,
+    _name VARCHAR(225) NOT NULL,
+    surname VARCHAR(225) NOT NULL,
+    email VARCHAR(225) NOT NULL,
+    birth DATE NOT NULL,
+    _password LONGTEXT NOT NULL
+ );
+
+//products
+CREATE TABLE product(
+    prid INT(11) NOT NULL PRIMARY KEY,
+    _name VARCHAR(255) NOT NULL,
+    descript LONGTEXT NOT NULL,
+    _year INT(4) NOT NULL,
+    price INT(5) NOT NULL
+
+ );
+
+INSERT INTO product(prid,_name,descript,_year,price) VALUES (1,"huawei","2.3GHz Dual-Core Intel Core i5
+ 8GB onboard memory
+ Configurable to 16GB of memory
+ 128GB PCIe-based onboard SSD
+ Intel Iris Plus Graphics 640",2019,7500);
+
+ INSERT INTO product(prid,_name,descript,_year,price) VALUES (2,"Mac-book air","Apple M1 chip
+ 7-core GPU
+ 16-core Neural Engine
+ Up to 15 hours wireless web
+ 30W USB-C Power Adapter
+ 8GB",2020,16000);
+
+ INSERT INTO product(prid,_name,descript,_year,price) VALUES (3,"mac-pro"," Apple M1 chip
+ Storage: 1TB SSD
+ Memory: 16GB 
+ Up to 15 hours wireless web
+ 30W USB-C Power Adapter
+ 8GB",2021,15000);
+
+ INSERT INTO product(prid,_name,descript,_year,price) VALUES (4,"mac-pro 16inch","Apple M1 chip
+ 8-core GPU
+ 16-core Neural Engine
+ Configurable to 16GB of memory
+ 128GB PCIe-based onboard SSD",2021,12000);
+
+ INSERT INTO product(prid,_name,descript,_year,price) VALUES (5,"mac-pro 13inch","2.3GHz Dual-Core Intel Core i7
+ 12GB onboard memory
+ Configurable to 32GB of memory
+ 1TB onboard SSD",2020,8000);
+
+ INSERT INTO product(prid,_name,descript,_year,price) VALUES (6,"lenovo"," Cpu AMD 3020E 1.2GHz
+ Ram 4GB
+ 1TB HDD
+ Window 10 Home SL",2019,45000);
+
+ INSERT INTO product(prid,_name,descript,_year,price) VALUES (7,"acer","Intel Core i3
+ 36GB onboard memory
+ 128GB PCIe-based onboard SSD
+ Intel Iris Plus Graphics 640",2021,12000);
+ 
+ INSERT INTO product(prid,_name,descript,_year,price) VALUES (8,"huawei","3GHz Dual-Core Intel Core i5
+ 1TB of memory
+ 256GB PCIe-based onboard SSD
+ Intel Iris Plus Graphics 640",2019,8000);
+
+INSERT INTO product(prid,_name,descript,_year,price) VALUES (9,"acer swift","4GHz Dual-Core Intel Core i5
+2TB onboard memory
+Configurable to 64GB of memory
+128GB PCIe-based onboard SSD",2020,8500);
+
+INSERT INTO product(prid,_name,descript,_year,price) VALUES (10,"lip","Intel Celeron J4005 Processor
+4GB on board Memory
+14"" 1920x1080 TN LED Panel
+128 GB eMMC Storage
+Windows 10 Pro",2021,4655);
+
+INSERT INTO product(prid,_name,descript,_year,price) VALUES (11,"dell x","11th Intel Core i5-1135G7 
+16GB 4267MHz Memory Onboard
+512GB NVMe Solid State Drive
+Intel Iris Xe Graphics
+Display: 13.4 FHD",2021,12000);
+
+INSERT INTO product(prid,_name,descript,_year,price) VALUES (12,"dell","11th Gen Intel Core i5
+16GB 4267MHz Memory 
+512GB NVMe Solid State
+Intel Iris Xe Graphics
+System: Windows 10 Homeh",2018,7000);
+
+INSERT INTO product(prid,_name,descript,_year,price) VALUES (13,"araze"," Intel Core i7-11800H 
+16GB Memory
+1TB SSD Storage
+NVIDIA GeForce RTX 3070 
+17.3 4K HDR Display",2019,6500);
+
+INSERT INTO product(prid,_name,descript,_year,price) VALUES (14,"aoru", "Intel Core i9-10980HK 
+64GB Memory
+2TB SSD _Storage
+NVIDIA GeForce RTX 3080
+15.6 4K OLED Display",2020,10000);
+
+INSERT INTO product(prid,_name,descript,_year,price) VALUES (15,"micro","10th Intel Core i7-1065G7
+Memory: 32GB
+Storage: 512GB
+NVIDIA GeForce GTX 1660Ti",2019,4500);
+
+INSERT INTO product(prid,_name,descript,_year,price) VALUES (16,"asus"," Intel Core i5 
+64GB Memory
+200GB SSD Storage
+15.6 4K OLED ",2019,7000);
