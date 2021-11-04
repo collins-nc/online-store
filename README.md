@@ -6,7 +6,7 @@ OOP
 
 Run XAMPPP
 extract folder
-Past in XAMPP htdocs root folder
+Paste in XAMPP htdocs root folder
 Open myPhpAmin
 run provided SQL code (Dbh)
 
