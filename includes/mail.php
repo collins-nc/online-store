@@ -11,5 +11,5 @@ $headers = "From: noreply@yoursite.com" . "\r\n" .
 if($email!=NULL){
     mail($to,$subject,$txt,$headers);
 }
-header("Location:index.html");
+header("Location: ../index.php");
 ?>
