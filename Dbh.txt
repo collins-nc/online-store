@@ -10,6 +10,14 @@ CREATE TABLE _user(
     birth DATE NOT NULL,
     _password LONGTEXT NOT NULL
  );
+ /*order*/
+ CREATE TABLE _order(
+    id INT(11) NOT NULL,
+    email VARCHAR(255) NOT NULL,
+    product VARCHAR(255) NOT NULL,
+    _desc LONGTEXT NOT NULL,
+    _price INT(7) NOT NULL
+);
 
 /*products*/
 CREATE TABLE product(
