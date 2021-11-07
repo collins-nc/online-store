@@ -16,21 +16,25 @@
 					<th scope="col">Desciption</th>
 					<th scope="col" colspan="2">Price</th>
 				</tr>
-				<tr>
-					<td><?php
-					echo $_GET['name'];?></td>	
-					<td><?php
-					
-					echo wordwrap($_GET['descrip'],15,"<br>\n");
-					
-					?>
-					</td>
-					<td scope="col" colspan="2">
-					<?php
-					echo "<strong>R</strong>$_GET[price]";
-					?>
-					</td>
-				</tr>
+				<?php
+					$x = $_GET["count"];
+					while($x>0){
+						echo "<tr>
+						<td>
+						{$_GET['name']}
+						</td>	
+						<td>
+						{$_GET['descrip']}
+						</td>
+						<td scope='col' colspan='2'>
+						<strong>R</strong>{$_GET['price']};
+						</td>
+					</tr>";
+						$x--;
+					}
+
+				?>
+
 			  </thead>
 			  <tbody>
 			  
@@ -39,13 +43,13 @@
 
 			<ul id="shopping-cart-actions">
 				<li>
-					<a href="content.page.php" class="btn">Continue Shopping</a>
+					<a href="content.page.html" class="btn">Continue Shopping</a>
 				</li>
 				<li>
 					<a href="buy.page.php" class="btn">Go To Checkout</a>
 				</li>
 			</ul>
-		<img style="position:absolute;Top:-200px;left:-120px"src="images/Removal-53.png" alt="order">
+		<img style="position:absolute;Top:-225px;left:-120px"src="images/Removal-53.png" alt="order">
 	</div>
 	
 	
