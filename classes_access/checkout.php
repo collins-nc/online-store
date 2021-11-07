@@ -46,6 +46,13 @@ class checkout extends Dbh{
             </td>
         </tr>";
         }
+        
+        $stmt = $this->connect()->prepare("TRUNCATE TABLE _order;");
+    
+        if(!$stmt->execute()){
+            $stmt = null;
+            header("Location: ../index.php?error=stmtfail");
+        }
         return $line;
 
 
