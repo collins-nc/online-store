@@ -17,21 +17,7 @@
 					<th scope="col" colspan="2">Price</th>
 				</tr>
 				<?php
-					$x = $_GET["count"];
-					while($x>0){
-						echo "<tr>
-						<td>
-						{$_GET['name']}
-						</td>	
-						<td>
-						{$_GET['descrip']}
-						</td>
-						<td scope='col' colspan='2'>
-						<strong>R</strong>{$_GET['price']};
-						</td>
-					</tr>";
-						$x--;
-					}
+					include "includes/checkout.view.php";
 
 				?>
 
@@ -40,7 +26,7 @@
 			  
 			  </tbody>
 			</table>
-
+	
 			<ul id="shopping-cart-actions">
 				<li>
 					<a href="content.page.html" class="btn">Continue Shopping</a>
