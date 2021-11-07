@@ -1,4 +1,6 @@
 <?php
+    session_status() === PHP_SESSION_ACTIVE ?: session_start();
+
 
 class checkout extends Dbh{
     private $items;
@@ -11,15 +13,42 @@ class checkout extends Dbh{
             $stmt = null;
             header("Location: ../index.php?error=stmtfail");
         }else{
-            $data = array();
-            $data = $stmt->fetchAll(PDO::FETCH_ASSOC);
-            $sline ="name=".$data[0]['_name']."&descrip=".$data[0]['descript']."&price=".$data[0]['price'];
             
-            return $sline;
-
+            $data = array();
+            $data = $stmt->fetch();
+            $stmt = null;
+            $stmt = $this->connect()->prepare("INSERT INTO _order(id,email,product,_desc,_price) VALUES(?,?,?,?,?);");
+            if(!$stmt->execute(array($_SESSION["userid"],$_SESSION["username"],$data["_name"],$data["descript"],$data["price"]))){
+            header("Location: ../index.php?error=stmtfail");
+            }
         }
     }
-}
-        
 
+    public function getdata(){
+        
+        $stmt = $this->connect()->prepare("SELECT * FROM _order;");
+    
+        if(!$stmt->execute(array($this->items))){
+            $stmt = null;
+            header("Location: ../index.php?error=stmtfail");
+        }
+        $line = "";
+        while($data = $stmt->fetch()){
+            $line.= "<tr>
+            <td>
+            {$data['product']}
+            </td>	
+            <td>
+            {$data['_desc']}
+            </td>
+            <td scope='col' colspan='2'>
+            <strong>R</strong>{$data['_price']};
+            </td>
+        </tr>";
+        }
+        return $line;
+
+
+    }
+}
         
