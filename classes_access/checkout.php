@@ -28,7 +28,7 @@ class checkout extends Dbh{
         
         $stmt = $this->connect()->prepare("SELECT * FROM _order;");
     
-        if(!$stmt->execute(array($this->items))){
+        if(!$stmt->execute()){
             $stmt = null;
             header("Location: ../index.php?error=stmtfail");
         }
